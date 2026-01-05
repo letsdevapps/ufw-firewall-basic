@@ -12,17 +12,17 @@ Depois de adicionar as permissões, você pode verificar se as regras foram apli
     
     Status: active Logging: on (low) Default: deny (incoming), allow (outgoing), disabled (routed) New profiles: skip
 
-    1. Status: active
-    Isso significa que o UFW está ativo e em funcionamento.
-    2. Logging: on (low)
-    O log está ativado, mas com um nível baixo de detalhamento. Isso ajuda a monitorar eventos sem sobrecarregar seu sistema com muitas informações.
-    3. Default: deny (incoming), allow (outgoing)
-    3.1 deny (incoming): Conexões de entrada são bloqueadas por padrão. Ou seja, qualquer pessoa ou sistema tentando se conectar ao seu computador (sem uma regra específica) será bloqueado.
-    3.2 allow (outgoing): Conexões de saída são permitidas por padrão. Então, programas como o Firefox podem acessar a internet sem problemas, porque o tráfego de saída não é bloqueado.
-    4. disabled (routed)
-    Isso se refere ao tráfego de roteamento. Basicamente, significa que o firewall não está configurado para rotear pacotes entre diferentes interfaces de rede. Na maioria dos casos, isso não afeta você diretamente, a menos que esteja configurando algo como um servidor que precise roteamento entre redes.
-    5. New profiles: skip
-    Isso significa que o UFW não está automaticamente aplicando novos perfis de aplicativos. Ou seja, ele não vai automaticamente tentar configurar regras para novos programas ou serviços que você instale. Você terá que adicionar essas regras manualmente se precisar.
+1. Status: active
+Isso significa que o UFW está ativo e em funcionamento.
+2. Logging: on (low)
+O log está ativado, mas com um nível baixo de detalhamento. Isso ajuda a monitorar eventos sem sobrecarregar seu sistema com muitas informações.
+3. Default: deny (incoming), allow (outgoing)
++ deny (incoming): Conexões de entrada são bloqueadas por padrão. Ou seja, qualquer pessoa ou sistema tentando se conectar ao seu computador (sem uma regra específica) será bloqueado.
++ allow (outgoing): Conexões de saída são permitidas por padrão. Então, programas como o Firefox podem acessar a internet sem problemas, porque o tráfego de saída não é bloqueado.
+4. disabled (routed)
+Isso se refere ao tráfego de roteamento. Basicamente, significa que o firewall não está configurado para rotear pacotes entre diferentes interfaces de rede. Na maioria dos casos, isso não afeta você diretamente, a menos que esteja configurando algo como um servidor que precise roteamento entre redes.
+5. New profiles: skip
+Isso significa que o UFW não está automaticamente aplicando novos perfis de aplicativos. Ou seja, ele não vai automaticamente tentar configurar regras para novos programas ou serviços que você instale. Você terá que adicionar essas regras manualmente se precisar.
 
 Caso não tenha vindo
 
@@ -78,11 +78,11 @@ Esse comando mostra os serviços que você pode permitir de forma mais fácil, s
 
 ## Verificação dos Logs
 
-Para abrir esse arquivo com o nano e visualizar o conteúdo, execute o seguinte comando
+Para abrir o arquivo de log com o nano e visualizar
 
     sudo nano /var/log/ufw.log
 
-Se você quiser ver os logs em tempo real enquanto o sistema está gerando novos eventos, você pode usar o comando tail
+Se você quiser ver os logs em tempo real enquanto o sistema está gerando novos eventos
 
     sudo tail -f /var/log/ufw.log
 
