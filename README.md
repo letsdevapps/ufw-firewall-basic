@@ -24,15 +24,15 @@ Se você está usando um servidor web (Apache ou Nginx) e quer que ele seja aces
 
 Permitir HTTP (porta 80)
 
-   sudo ufw allow 80/tcp
+    sudo ufw allow 80/tcp
    
 Permitir HTTPS (porta 443)
 
-   sudo ufw allow 443/tcp
+    sudo ufw allow 443/tcp
 
 Permitir SSH (porta 22) para acesso remoto via terminal
 
-   sudo ufw allow 22/tcp
+    sudo ufw allow 22/tcp
 
 ### Permitir qualquer aplicação já instalada:
 
@@ -40,11 +40,11 @@ O UFW também permite que você **libere aplicativos inteiros** em vez de libera
 
 Permitir o Apache (servidor web)
 
-  sudo ufw allow 'Apache'
+    sudo ufw allow 'Apache'
 
 Permitir o Nginx
 
-  sudo ufw allow 'Nginx Full'
+    sudo ufw allow 'Nginx Full'
 
 ### Como saber quais aplicativos podem ser permitidos:
 
