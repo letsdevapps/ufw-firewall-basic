@@ -56,6 +56,19 @@ Permitir SSH (porta 22) para acesso remoto via terminal
 
     sudo ufw allow 22/tcp
 
+### Limitar as conexões:
+
+Se você só quiser permitir conexões de um IP específico (por exemplo, seu computador ou rede local), você pode restringir a regra. Para permitir apenas conexões de uma rede ou IP específico, você pode adicionar algo assim:
+
+    sudo ufw allow from 192.168.1.0/24 to any port 80 proto tcp
+
+ou
+
+    dig +short www.exemplo.com
+    98.765.432.100
+    
+    sudo ufw allow from 98.765.432.100 to any port 80 proto tcp
+
 ### Permitir qualquer aplicação já instalada:
 
 O UFW também permite que você **libere aplicativos inteiros** em vez de liberar apenas portas específicas
